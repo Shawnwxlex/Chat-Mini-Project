@@ -1,0 +1,101 @@
+.vpn-warning {
+  position: fixed;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1001;
+  animation: slideDownFade 0.3s ease-out;
+  pointer-events: auto; /* 允许点击交互 */
+}
+
+@keyframes slideDownFade {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+.vpn-warning-content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background-color: var(--error-bg, rgba(255, 87, 34, 0.95));
+  border: 1px solid var(--error-border, rgba(255, 87, 34, 0.8));
+  border-radius: 8px;
+  padding: 14px 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  max-width: 500px;
+  min-width: 350px;
+  backdrop-filter: blur(10px);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.vpn-warning-icon {
+  font-size: 22px;
+  flex-shrink: 0;
+}
+
+.vpn-warning-text {
+  flex: 1;
+  color: var(--error-text, #ffffff);
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.4;
+  word-break: break-word;
+  text-align: center;
+}
+
+.vpn-warning-close {
+  background: none;
+  border: none;
+  color: var(--error-text, #ffffff);
+  font-size: 24px;
+  cursor: pointer;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: 4px;
+  transition: background-color 0.2s, transform 0.2s;
+  line-height: 1;
+}
+
+.vpn-warning-close:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: scale(1.1);
+}
+
+.vpn-warning-close:active {
+  transform: scale(0.95);
+}
+
+/* 暗黑模式适配 */
+@media (prefers-color-scheme: dark) {
+  .vpn-warning-content {
+    background-color: rgba(255, 87, 34, 0.9);
+    border-color: rgba(255, 87, 34, 0.7);
+  }
+
+  .vpn-warning-text {
+    color: #ffffff;
+  }
+}
+
+/* 亮色模式适配 */
+@media (prefers-color-scheme: light) {
+  .vpn-warning-content {
+    background-color: rgba(255, 87, 34, 0.95);
+    border-color: rgba(255, 87, 34, 0.8);
+  }
+
+  .vpn-warning-text {
+    color: #ffffff;
+  }
+}

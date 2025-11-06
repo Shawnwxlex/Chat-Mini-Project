@@ -1,0 +1,140 @@
+.sidebar {
+  min-height: 100vh;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--bg-tertiary);
+  padding: 25px 15px;
+  transition: background-color 0.3s ease;
+}
+.sidebar img {
+  width: 20px;
+  /* 暗黑模式下调整图标亮度和对比度，使其在深色背景上可见 */
+  filter: var(--sidebar-icon-filter);
+  transition: filter 0.3s ease;
+}
+
+.sidebar .menu {
+  display: block;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.sidebar .new-chat {
+  margin-top: 50px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 15px;
+  background-color: var(--bg-secondary);
+  border-radius: 50px;
+  font-size: 14px;
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.sidebar .new-chat:hover {
+  background-color: var(--bg-hover);
+}
+.sidebar .recent {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar .recent-title {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  color: var(--text-primary);
+  transition: color 0.3s ease;
+}
+.sidebar .recent-entry {
+  display: flex;
+  align-items: start;
+  gap: 10px;
+  padding: 10px;
+  padding-right: 40px;
+  border-radius: 50px;
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.sidebar .recent-entry:hover {
+  background-color: var(--bg-hover);
+}
+
+/* 选中状态的样式 */
+.sidebar .recent-entry.active {
+  background-color: var(--bg-secondary);
+  font-weight: 500;
+}
+
+.sidebar .bottom {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar .bottom-item {
+  padding: 10px;
+  cursor: pointer;
+}
+
+/* 开发中提示 */
+.coming-soon-toast {
+  position: fixed;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  animation: slideDownFadeIn 0.3s ease-out,
+    slideUpFadeOut 0.3s ease-in 2.7s forwards;
+}
+
+.coming-soon-content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 14px 20px;
+  box-shadow: var(--shadow-md);
+  min-width: 200px;
+  max-width: 300px;
+  backdrop-filter: blur(10px);
+}
+
+.coming-soon-icon {
+  font-size: 20px;
+  line-height: 1;
+}
+
+.coming-soon-text {
+  color: var(--text-primary);
+  font-size: 14px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+@keyframes slideDownFadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+@keyframes slideUpFadeOut {
+  from {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-20px);
+  }
+}

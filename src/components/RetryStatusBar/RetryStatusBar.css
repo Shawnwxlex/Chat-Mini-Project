@@ -1,0 +1,68 @@
+.retry-status-bar {
+  position: fixed;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999;
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 12px 20px;
+  box-shadow: var(--shadow-md);
+  min-width: 300px;
+  max-width: 500px;
+  animation: slideDown 0.3s ease-out;
+}
+
+.retry-status-content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text-primary);
+  font-size: 14px;
+}
+
+.retry-icon {
+  font-size: 16px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.retry-text {
+  flex: 1;
+  line-height: 1.5;
+}
+
+.retry-progress {
+  margin-top: 8px;
+  height: 4px;
+  background-color: var(--bg-tertiary);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.retry-progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #4a9eff, #6bb0ff);
+  border-radius: 2px;
+  transition: width 0.1s linear;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
