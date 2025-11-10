@@ -9,7 +9,7 @@
 
 一个基于 **React + Vite** 开发的现代化智能对话应用，集成 **Google Gemini API**，支持流式对话、多模态输入、虚拟滚动等高级特性。
 
-[在线演示](https://chat-mini-project-nine.vercel.app/) • [功能特性](#-功能特性) • [技术栈](#-技术栈) • [快速开始](#-快速开始)
+[在线演示（非中国大陆网络）](https://chat-mini-project-nine.vercel.app/) • [功能特性](#-功能特性) • [技术栈](#-技术栈) • [快速开始](#-快速开始)
 
 </div>
 
@@ -354,12 +354,6 @@ VITE_GEMINI_API_KEY=your_api_key_here
 
 ---
 
-## 📄 许可证
-
-本项目采用 MIT 许可证 - 查看 [LICENSE](LICENSE) 文件了解详情
-
----
-
 ## 🙏 致谢
 
 - [Google Gemini API](https://ai.google.dev/) - 提供强大的 AI 能力
@@ -375,6 +369,6 @@ VITE_GEMINI_API_KEY=your_api_key_here
 
 **⭐ 如果这个项目对你有帮助，请给个 Star！⭐**
 
-Made with ❤️ by [Your Name]
+Made with ❤️ by Shawn Wei
 
 </div>
